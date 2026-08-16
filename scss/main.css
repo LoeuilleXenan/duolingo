@@ -84,12 +84,7 @@ body {
   background: white;
 }
 
-/*
-   BELANGRIJK:
-   De Lottie vult de volledige container.
-   Geen padding of margin waardoor er bovenaan
-   witruimte ontstaat.
-*/
+/* LOTTIE */
 .animation-container lottie-player {
   display: block;
   position: absolute;
@@ -99,8 +94,7 @@ body {
   height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+  overflow: hidden;
 }
 
 /* =========================
