@@ -1,0 +1,289 @@
+/* =========================
+   BASIS
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: #202020;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   PAGINA
+   ========================= */
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* =========================
+   SMARTPHONE
+   ========================= */
+
+.phone {
+    position: relative;
+
+    width: 360px;
+    height: 720px;
+
+    background: #181818;
+
+    border: 7px solid #111;
+
+    border-radius: 42px;
+
+    padding: 9px;
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.25),
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   TELEFOON SCHERM
+   ========================= */
+
+.phone-screen {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    background: white;
+
+    border-radius: 32px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   NOTCH
+   ========================= */
+
+.notch {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90px;
+    height: 20px;
+
+    background: #111;
+
+    border-radius: 0 0 14px 14px;
+
+    z-index: 20;
+}
+
+
+/* =========================
+   ANIMATIE
+   ========================= */
+
+.animation-container {
+    width: 100%;
+    height: 390px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    background: white;
+}
+
+.animation-container lottie-player {
+    display: block;
+
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+/* =========================
+   ONBOARDING CONTENT
+   ========================= */
+
+.onboarding-content {
+    flex: 1;
+
+    padding: 18px 18px 8px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   TEKST
+   ========================= */
+
+.screen-copy {
+    display: none;
+}
+
+.screen-copy.active {
+    display: block;
+}
+
+.screen-copy h1 {
+    margin: 0 0 8px;
+
+    font-size: 17px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    color: #111;
+}
+
+.screen-copy p {
+    margin: 0;
+
+    font-size: 11px;
+
+    line-height: 1.45;
+
+    color: #333;
+}
+
+
+/* =========================
+   NAVIGATIE
+   ========================= */
+
+.onboarding-navigation {
+    position: relative;
+
+    margin-top: auto;
+
+    min-height: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =========================
+   PROGRESS
+   ========================= */
+
+.progress {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.progress span {
+    width: 14px;
+    height: 4px;
+
+    border-radius: 10px;
+
+    background: #d9d9d9;
+
+    transition: all 0.2s ease;
+}
+
+.progress span.active {
+    width: 18px;
+
+    background: #58cc02;
+}
+
+
+/* =========================
+   NEXT BUTTON
+   ========================= */
+
+.next-btn {
+    position: absolute;
+
+    right: 0;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #4caf43;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.15s ease,
+                background 0.15s ease;
+}
+
+.next-btn:hover {
+    background: #439a3a;
+
+    transform: scale(1.05);
+}
+
+.next-btn:active {
+    transform: scale(0.94);
+}
+
+
+/* =========================
+   HOME INDICATOR
+   ========================= */
+
+.home-indicator {
+    position: absolute;
+
+    bottom: 7px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 70px;
+    height: 4px;
+
+    background: #111;
+
+    border-radius: 10px;
+
+    z-index: 20;
+}
