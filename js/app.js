@@ -62,13 +62,41 @@ function changeScreen(screenNumber) {
         "ready",
         () => {
 
-            animation.play();
+            if (screenNumber === totalScreens) {
+
+                animation.pause();
+
+            } else {
+
+                animation.play();
+
+            }
 
         },
         {
             once: true
         }
     );
+
+    /* =========================
+       SCHERM 6: ANIMATIE PAUZEREN
+       ========================= */
+
+    if (screenNumber === totalScreens) {
+
+        animation.addEventListener(
+            "complete",
+            () => {
+
+                animation.pause();
+
+            },
+            {
+                once: true
+            }
+        );
+
+    }
 
 
     /* =========================
